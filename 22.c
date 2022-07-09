@@ -1,10 +1,9 @@
 #include<stdio.h>
 void main()
 {
-    int a,b,c,large,largest;
-    printf("enter the three number");
+    int a,b,c,largest;
+    printf("Enter the three number");
     scanf("%d%d%d",&a,&b,&c);
-    large=(a>b)?a:b;
-    largest=(large>c)?large:c;
-    printf("the largest number is %d",largest);
+    largest=(a>b)?((a>c)?a:c):((b>c)?b:c);
+    printf("\n the largest number is %d",largest);
 }
