@@ -10,7 +10,7 @@ void main()
         length++;
     }
     printf("%d",length);
-    for(i=0;i<length-2;i++)
+    for(i=0;i<length/2;i++)
     {
         temp=a[i];
         a[i]=a[length-1-i];
