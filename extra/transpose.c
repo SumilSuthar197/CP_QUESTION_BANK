@@ -2,7 +2,7 @@
 void main() //final v2
 {
     int i,j,r,c,sum=0;
-    int a[100][100],;
+    int a[100][100],t[100][100];
     printf("Enter the no of rows and column:");
     scanf("%d%d",&r,&c);
     printf("\nEnter the matrix A");
