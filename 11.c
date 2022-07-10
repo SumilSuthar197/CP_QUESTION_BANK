@@ -5,7 +5,7 @@ void main()
     printf("enter the number of term in fibonacci series:");
     scanf("%d",&n);
     printf("\n fibonacci series:\n");
-    //printf("%d\t%d",a,b);
+    printf("%d\t%d",a,b);
 
     while(i<n)
     {
