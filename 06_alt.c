@@ -1,5 +1,5 @@
 #include<stdio.h>
-void main() //final v2
+void main() // this method uses another 2d matrix to store and print.
 {
     int i,j,r,c,sum=0;
     int a[100][100],t[100][100];
