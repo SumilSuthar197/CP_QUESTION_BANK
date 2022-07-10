@@ -1,43 +1,35 @@
 #include<stdio.h>
-struct data
-{
-    int p;
-    char a[30],t[30];
-    //p=price,a=author name,t=title name
-};
-
 void main()
 {
-    struct data d[5],temp;
-    int i,j;
-
-    for ( i = 0; i < 5; i++)
+    int i,j, n = 5;
+    struct book
     {
-        printf("\nenter Title ,Author name and price of book:");
-        scanf("%s%s%d",d[i].t,d[i].a,&d[i].p);
+        char title[30];
+        char author[30];
+        int price;
+    };
+    struct book a[n],temp;
+    for (i=0;i<n;i++)
+    {
+        printf("Enter Title, Author and Price of Book %d\n", i+1);
+        scanf("%s %s %d", &a[i].title,&a[i].author,&a[i].price);
     }
-    
-    for ( i = 0; i <=4; i++)
+    for (i=0;i<n;i++)
     {
-        for(j=0;j<=3;j++)
+        for (j=0;j<n-1;j++)
         {
-            if(d[j].p>d[j+1].p)
+            if (a[j].price>a[j+1].price)
             {
-                temp=d[j];
-                d[j]=d[j+1];
-                d[j+1]=temp;
+                temp = a[j];
+                a[j]=a[j+1];
+                a[j+1]=a[i];
             }
-
         }
     }
-
-    printf("\nTitle\tAuthor\tprice of book");
-    printf("\n--------------------------------------------------");
-    
-    for ( i = 0; i < 5; i++)
+    printf("Title\tAuthor\tPrice of Book\n");
+    printf("---------------------------------------\n");
+    for (i=0;i<n;i++)
     {
-        printf("\n%s\t%s\t%d",d[i].t,d[i].a,d[i].p);
+        printf("%s\t%s\t%d\t\n", a[i].title, a[i].author,a[i].price);
     }
-    
-
 }
